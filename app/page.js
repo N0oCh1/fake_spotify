@@ -1,5 +1,6 @@
 import style from "./styles/app.module.css"
 import AsideTopvar from "./component/AsideTopVar";
+import AsideVar from "./component/AsideVar";
 
 export default function Home() {
   const {spotyStyle} = style
@@ -11,7 +12,9 @@ export default function Home() {
           <AsideTopvar/>
         </div>
         <div className=" bg-gray-900 rounded-lg p-2 h-full">
-
+          <div>
+            <AsideVar/> 
+          </div>
         </div>
       </aside>
 
