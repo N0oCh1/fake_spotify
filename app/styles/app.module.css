@@ -6,3 +6,6 @@
     grid-template-columns: 350px 1fr;
     grid-template-rows: 1fr auto;
 }
+.listContent {
+    height: 500px;
+}
