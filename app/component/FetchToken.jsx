@@ -1,12 +1,13 @@
 'use client'
 
-import { useState } from "react";
+import { useSearchParams } from "next/navigation";
+
 
 function FetchToken(props) {
     const {clientID, clientSecret} = props;
     console.log(clientID)
     const url = "https://accounts.spotify.com/api/token";
-    const param = new URLSearchParams(window.location.search);
+    const param = new useSearchParams();
     const code = param.get('code')
     console.log(code)
     console.log(clientID, clientSecret)
