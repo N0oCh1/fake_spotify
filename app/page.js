@@ -5,6 +5,7 @@ import AsideVar from "./component/AsideVar";
 import AsidePlaylist from "./component/AsidePlaylist";
 import FetchData from "./component/FetchData";
 import FetchToken from "./component/FetchToken";
+import { Suspense } from "react";
 
 
 export default function Home() {
@@ -31,8 +32,10 @@ export default function Home() {
       </aside>
 
       <main className="[grid-area:main] bg-gray-900 h-full rounded-lg">
-        <FetchData clientID = {clientID} />
-        <FetchToken clientID = {clientID} clientSecret = {clientSecret}/>
+        <Suspense>
+          <FetchData clientID = {clientID} />
+          <FetchToken clientID = {clientID} clientSecret = {clientSecret}/>
+        </Suspense>
       </main>
 d
       <footer className="[grid-area:player] bg-black border border-gray-900 rounded-lg h-16">
