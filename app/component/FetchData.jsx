@@ -1,6 +1,5 @@
 'use client'
 
-import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 
 function FetchData (props) {
@@ -8,7 +7,7 @@ function FetchData (props) {
     const scope = "playlist-read-private playlist-read-collaborative";
     const rediret = "http://localhost:3000/";
 // use searchParams for obtain spotyfy code 
-    const param = new useSearchParams();
+    const param = new URLSearchParams();
     const [fetch, setFetch] = useState(false)
     if(fetch){
         param.append("client_id", clientID);
