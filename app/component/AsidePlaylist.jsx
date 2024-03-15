@@ -1,0 +1,36 @@
+export default function AsidePlaylist () {
+    return(
+        <div>  
+            <header>
+                Search Var
+            </header>
+            <ul>
+                <li>content</li>
+                <li>content</li>
+                <li>content</li>
+                <li>content</li>
+                <li>content</li>
+                <li>content</li>
+                <li>content</li>
+                <li>content</li>
+                <li>content</li>
+                <li>content</li>
+                <li>content</li>
+                <li>content</li>
+                <li>content</li>
+                <li>content</li>
+                <li>content</li>
+                <li>content</li>
+                <li>content</li>
+                <li>content</li>
+                <li>content</li>
+                <li>content</li>
+                <li>content</li>
+                <li>content</li>
+                <li>content</li>
+                <li>content</li>
+                <li>content</li>
+            </ul>
+        </div>
+    )
+}
