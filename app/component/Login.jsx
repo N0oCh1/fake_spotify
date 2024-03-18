@@ -1,6 +1,6 @@
 'use client'
 import { useSearchParams } from "next/navigation"
-import { getAccessToken, getCode } from "../utils/page"
+import { getAccessToken, getCode } from "../utils/utils"
 
 export default function Login(props){
     const searchParams = useSearchParams();

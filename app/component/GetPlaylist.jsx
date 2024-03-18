@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from "react";
-import { getPlaylist } from "../utils/page"
+import { getPlaylist } from "../utils/utils"
 import PlaylistCard from "./PlaylistCard";
 
 export default function GetPlaylist() {
