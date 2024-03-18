@@ -74,3 +74,17 @@ export async function getUserProfile (accessToken) {
     }
 
 }
+
+export async function getPlaylist () {
+    const accessToken = localStorage.getItem("access_token");
+    try{
+        const playlist = await fetch("https://api.spotify.com/v1/me/playlists", {
+            method: "GET",
+            headers: {"Authorization": "Bearer " + accessToken}
+        }).then(res => res.json()).then(data=>data.items);
+        return await playlist;
+    }
+    catch (error) {
+        console.log(error);
+    }
+ }

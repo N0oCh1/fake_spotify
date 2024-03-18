@@ -5,6 +5,7 @@ import AsideVar from "./component/AsideVar";
 import AsidePlaylist from "./component/AsidePlaylist";
 import { Suspense } from "react";
 import Login from "./component/Login";
+import GetPlaylist from "./component/GetPlaylist";
 
 
 export default function Home() {
@@ -16,7 +17,7 @@ export default function Home() {
   const redirectURL = "http://localhost:3000/"
   return (
     <div className= {`${spotyStyle} ralative h-screen gap-2 p-2 flex bg-gray-950`}>
-      <aside className="[grid-area:aside] bg-black flex flex-col gap-2 ">
+      <aside className="[grid-area:aside] bg-black flex flex-col gap-2 max-h-screen">
         <div className="bg-gray-900 rounded-lg p-2">
           <AsideTopvar/>
         </div>
@@ -30,10 +31,11 @@ export default function Home() {
         </div>
       </aside>
 
-      <main className="[grid-area:main] bg-gray-900 h-full rounded-lg">
+      <main className="[grid-area:main] bg-gray-900 h-full rounded-lg ">
         <Suspense>
           <Login clientID = {clientID} scope={scope} redirectURL={redirectURL} clientSecret={clientSecret}/>
         </Suspense>
+        <GetPlaylist/>
       </main>
 d
       <footer className="[grid-area:player] bg-black border border-gray-900 rounded-lg h-16">

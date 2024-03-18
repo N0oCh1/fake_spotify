@@ -14,7 +14,7 @@ export default function Login(props){
         <>
             <button 
             className="p-2 rounded-md border-2 border-white hover:bg-zinc-400"
-            onClick={() => {login()}}>
+            onClick={(e) => {login(); e.preventDefault();}}>
                 Login
             </button> 
         </>
